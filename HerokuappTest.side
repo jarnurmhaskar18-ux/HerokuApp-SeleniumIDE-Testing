@@ -1,0 +1,295 @@
+{
+  "id": "fb9c78ab-62c0-4dc3-82b4-845fa7a80db9",
+  "version": "3.0",
+  "name": "Login_Test_Project",
+  "url": "http://www.google.com",
+  "urls": [
+    "http://www.google.com"
+  ],
+  "plugins": [],
+  "suites": [
+    {
+      "id": "24948f5a-ff37-4d38-be7c-0290941cb50d",
+      "name": "New Suite",
+      "parallel": false,
+      "persistSession": false,
+      "tests": [
+        "9f1c8e38-ee7a-48d2-9244-7598e2df907b"
+      ],
+      "timeout": 30000
+    }
+  ],
+  "tests": [
+    {
+      "id": "9f1c8e38-ee7a-48d2-9244-7598e2df907b",
+      "name": "Login",
+      "commands": [
+        {
+          "id": "4c2ca0cb-8efc-43b5-9d32-4cda8df928a2",
+          "command": "open",
+          "target": "https://the-internet.herokuapp.com/login ",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "tomsmith",
+          "id": "6fa37100-1da0-4bc3-a3d1-dacbc5e9400c"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "SuperSecretPassword!",
+          "id": "fadc3968-618a-4bbb-912c-9a78d816b4f9"
+        },
+        {
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "value": "",
+          "id": "747ad016-0eea-4a08-8a32-7652105ceda5"
+        },
+        {
+          "command": "verifyText",
+          "target": "css=h2",
+          "value": "Secure Area",
+          "id": "5a07062d-0624-4723-a91e-fcf5fe3dd87d",
+          "fallbackTargets": [
+            [
+              "css=h2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/h2)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2[contains(.,'Secure Area')]",
+              "xpath:innerText"
+            ],
+            [
+              "xpath=(//div[@id='flash'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='flash-messages']/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "click",
+          "target": "css=.icon-2x",
+          "value": "",
+          "id": "b86766e2-66f3-4cc1-8ce1-b4c078fc5acf",
+          "fallbackTargets": [
+            [
+              "css=.icon-2x",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/a/i)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//i[contains(.,'Logout')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "verifyText",
+          "target": "css=h2",
+          "value": "Login Page",
+          "id": "bf0e49c9-ede2-4915-88c2-730963478ef0",
+          "fallbackTargets": [
+            [
+              "css=h2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/h2)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2[contains(.,'Login Page')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "23a05a7c-ef88-4250-9ff5-6f8d38ca34d2",
+      "name": "Invalid Login",
+      "commands": [
+        {
+          "id": "54e62c1d-0666-4a13-8539-50d2ae2536ac",
+          "command": "open",
+          "target": "https://the-internet.herokuapp.com/login ",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "tom",
+          "id": "58cd26a8-893b-49b4-9f65-2f241e9cdf26"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "SuperSecretPassword!",
+          "id": "5dbd0cc3-3783-4834-8fb0-2e3d324231aa"
+        },
+        {
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "value": "",
+          "id": "51c694fc-5b3a-4ad5-af98-be87e37d0a23"
+        },
+        {
+          "command": "verifyText",
+          "target": "css=h2",
+          "value": "Login Page",
+          "id": "86ca4fd5-25f8-4dbd-953a-343f3517f217",
+          "fallbackTargets": [
+            [
+              "css=h2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/h2)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2[contains(.,'Login Page')]",
+              "xpath:innerText"
+            ],
+            [
+              "xpath=(//div[@id='flash'])[1]",
+              "xpath:attributes"
+            ],
+            [
+              "xpath=(//div[@id='flash-messages']/div)[1]",
+              "xpath:idRelative"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "tomsmith",
+          "id": "b13c4db4-d44b-487b-8503-50bc6bb1e949"
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "supersecretpassword",
+          "id": "84b2c7fc-3e46-454d-a058-a17123a7fb39"
+        },
+        {
+          "command": "verifyText",
+          "target": "css=h2",
+          "value": "Login Page",
+          "id": "8fc46fdf-6cdc-4e74-ad39-53a65c89e3fb",
+          "fallbackTargets": [
+            [
+              "css=h2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/h2)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2[contains(.,'Login Page')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a402aa30-0474-418b-817e-17033536b3cb",
+      "name": "Empty Username or Password",
+      "commands": [
+        {
+          "id": "ccf57c23-1b5f-4bd4-b6af-1d7e34e6a6ad",
+          "command": "open",
+          "target": "https://the-internet.herokuapp.com/login ",
+          "value": ""
+        },
+        {
+          "command": "type",
+          "target": "id=password",
+          "value": "SuperSecretPassword!",
+          "id": "d9703aeb-9c1f-445d-9567-2c070e2d84ce"
+        },
+        {
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "value": "",
+          "id": "18f7d3bb-f7b5-4cd1-9ba0-ef6d1c0b0fa9"
+        },
+        {
+          "command": "verifyText",
+          "target": "css=h2",
+          "value": "Login Page",
+          "id": "3c191303-7833-4c09-af28-3782fd7c5bb6",
+          "fallbackTargets": [
+            [
+              "css=h2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/h2)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2[contains(.,'Login Page')]",
+              "xpath:innerText"
+            ]
+          ]
+        },
+        {
+          "command": "type",
+          "target": "id=username",
+          "value": "tomsmith",
+          "id": "1428e57c-b8fb-46e9-9150-472433496e3f"
+        },
+        {
+          "command": "click",
+          "target": "css=button[type='submit']",
+          "value": "",
+          "id": "009c1584-1f81-4b05-bb76-25d46d866dd9"
+        },
+        {
+          "command": "verifyText",
+          "target": "css=h2",
+          "value": "Login Page",
+          "id": "d066e626-4d07-4524-ac47-62d69c6a167b",
+          "fallbackTargets": [
+            [
+              "css=h2",
+              "css:finder"
+            ],
+            [
+              "xpath=(//div[@id='content']/div/h2)[1]",
+              "xpath:idRelative"
+            ],
+            [
+              "xpath=//h2[contains(.,'Login Page')]",
+              "xpath:innerText"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "snapshot": {
+    "dependencies": {},
+    "tests": [],
+    "jest": {
+      "extraGlobals": []
+    }
+  }
+}
