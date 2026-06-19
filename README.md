@@ -18,6 +18,15 @@ https://the-internet.herokuapp.com/login
 5. Empty Password Login
 6. Logout
 
+## Test Summary
+
+| Metric           |Count|
+|------------------|-----|
+| Total Test Cases | 6   |
+| Passed           | 6   |
+| Failed           | 0   |
+| Blocked          | 0   |
+
 ## Features Tested
 - User Authentication
 - Dashboard Access
@@ -28,6 +37,16 @@ https://the-internet.herokuapp.com/login
 - Bug_Report.xlsx
 - Test_Execution_Report.docx
 - HerokuappTest.side
+
+## Screenshots
+
+Screenshots of:
+- Valid Login
+- Invalid Login
+- Empty Credentials
+- Logout Functionality
+
+are available in the Screenshots folder.
   
 ## Author
 Jarnur Mhaskar
