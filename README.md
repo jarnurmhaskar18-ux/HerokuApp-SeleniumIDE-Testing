@@ -3,6 +3,9 @@
 ## Objective
 Automate Login and Logout functionality using Selenium IDE.
 
+## Website Tested
+https://the-internet.herokuapp.com/login
+
 ## Tools Used
 - Selenium IDE
 - Chrome Browser
@@ -20,5 +23,11 @@ Automate Login and Logout functionality using Selenium IDE.
 - Dashboard Access
 - Logout
 
+## Project files
+- TestCases.xlsx
+- Bug_Report.xlsx
+- Test_Execution_Report.docx
+- HerokuappTest.side
+  
 ## Author
 Jarnur Mhaskar
